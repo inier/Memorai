@@ -68,6 +68,8 @@ export default function Game({fieldWidth=6, fieldHeight=3}) {
 	function onSuccessGuess() {
 		setCardCanFlip(firstCard.id, false);
 		setCardCanFlip(secondCard.id, false);
+		setCardIsFlipped(firstCard.id, false);
+		setCardIsFlipped(secondCard.id, false);
 		resetFirstAndSecondCards();
 	}
 	function onFailureGuess() {
@@ -100,7 +102,7 @@ export default function Game({fieldWidth=6, fieldHeight=3}) {
 		if ((firstCard && (card.id === firstCard.id) || (secondCard && (card.id === secondCard.id))))
 			return;
 
-		setCardIsFlipped(card.id, !card.isFlipped);
+		setCardIsFlipped(card.id, false);
 
 		(firstCard) ? setSecondCard(card) : setFirstCard(card);
 	}
