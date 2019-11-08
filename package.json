@@ -1,15 +1,8 @@
 {
 	"dependencies": {
-		"@fortawesome/fontawesome": "^1.1.8",
-		"@fortawesome/free-solid-svg-icons": "^5.11.2",
-		"@fortawesome/free-brands-svg-icons": "^5.11.2",
-		"@fortawesome/free-regular-svg-icons": "^5.11.2",
-		"lazysizes": "^5.1.1",
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0",
 		"uuid": "^3.3.3",
-		"react-intl": "^3.4.0",
-		"moment": "^2.24.0",
 		"normalize.css": "^8.0.1",
 		"deepcopy": "^2.0.0"
 	},
@@ -29,14 +22,11 @@
 		"@babel/preset-react": "^7.0.0",
 		"@babel/plugin-proposal-class-properties": "^7.5.5",
 		"@babel/plugin-proposal-throw-expressions": "^7.2.0",
-		"@babel/plugin-proposal-decorators": "^7.6.0",
 		"babel-loader": "^8.0.6",
 		"node-sass": "^4.12.0",
-		"autobind-decorator": "^2.4.0",
 		"live-server": "^1.2.1",
 		"html-webpack-plugin": "^3.2.0",
-		"webpack-bundle-analyzer": "^3.6.0",
-		"moment-locales-webpack-plugin": "^1.1.0"
+		"webpack-bundle-analyzer": "^3.6.0"
 	},
 	"scripts": {
 		"build": "webpack --display-error-details --mode=development",
@@ -50,18 +40,7 @@
 			"@babel/react"
 		],
 		"plugins": [
-			[
-				"@babel/proposal-decorators",
-				{
-					"legacy": true
-				}
-			],
-			[
-				"@babel/proposal-class-properties",
-				{
-					"loose": true
-				}
-			],
+			"@babel/proposal-class-properties",
 			"@babel/proposal-throw-expressions"
 		]
 	}

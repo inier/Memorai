@@ -3,7 +3,6 @@ const TerserPlugin = require("terser-webpack-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-const MomentLocalesPlugin = require("moment-locales-webpack-plugin");
 
 let mainJS = {
 	entry: {"main.js": "./src/js/main.js"},
@@ -27,10 +26,7 @@ let mainJS = {
 		new HtmlWebpackPlugin({
 			template: "./src/index.html",
 			filename: "../index.html"
-		}),
-		new MomentLocalesPlugin({
-            localesToKeep: ["ru", "en"]
-        })
+		})
 	],
 	module: {
 		rules: [
