@@ -31,7 +31,7 @@ $card-border-radius: 15px;
 		bottom: 0;
 		background: linear-gradient(45deg, #1fa5ff 25%, #1053ff 25%, #1053ff 50%, #1fa5ff 50%, #1fa5ff 75%, #1053ff 75%, #1053ff 100%);
 		background-size: 56px 56px;
-		&::before {
+		&::before, &::after {
 			border-radius: $card-border-radius - 2px;
 			content: "";
 			position: absolute;
@@ -41,6 +41,9 @@ $card-border-radius: 15px;
 			right: 0;
 			background: linear-gradient(#20E4A4, #2CC9CC);
 			opacity: .8;
+		}
+		&::after {
+			opacity: 0;
 			transition: opacity $animation-duration * 2;
 		}
 	}
@@ -49,8 +52,8 @@ $card-border-radius: 15px;
 	border: 2px solid $accent-color;
 	box-shadow: 0 0 10px rgba($accent-color, .6);
 
-	.back::before {
-		opacity: .9;
+	.back::after {
+		opacity: .5;
 	}
 }
 .card-container:hover .card.flipped {
