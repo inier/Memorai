@@ -11,4 +11,8 @@
 	grid-template-columns: repeat(6, auto);
 	grid-template-rows: repeat(3, 1fr);
 	grid-gap: $spacer;
+
+	@include media-breakpoint-down(md) {
+		grid-gap: $spacer / 2;
+	}
 }
