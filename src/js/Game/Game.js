@@ -97,16 +97,12 @@ export default function Game({fieldWidth=6, fieldHeight=3}) {
 		if (!card.canFlip)
 			return;
 
+		if ((firstCard && (card.id === firstCard.id) || (secondCard && (card.id === secondCard.id))))
+			return;
+
 		setCardIsFlipped(card.id, !card.isFlipped);
 
-		if (firstCard && (card.id === firstCard.id))
-			setFirstCard(null);
-		else if (secondCard && (card.id === secondCard.id))
-			setSecondCard(null);
-		else if (firstCard)
-			setSecondCard(card);
-		else
-			setFirstCard(card);
+		(firstCard) ? setSecondCard(card) : setFirstCard(card);
 	}
 
 	return <div className="game container-md">
