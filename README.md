@@ -1,2 +1,2 @@
-# Digiary Frontend
+# Memorai
 
