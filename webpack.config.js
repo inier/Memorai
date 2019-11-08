@@ -10,7 +10,7 @@ let mainJS = {
 	output: {
 		path: path.resolve(__dirname, "./static"),
 		filename: "js/bundle.main.[hash].js",
-		publicPath: "/static/"
+		publicPath: "static/"
 	},
 	resolve: {
 		modules: ["node_modules", "js"]

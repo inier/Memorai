@@ -16,7 +16,7 @@ function generateCards(count) {
 		.slice(0, count / 2)
 		.map(imageURL => ({
 			id: uuid.v4(),
-			imageURL: "/static/images/cards/" + imageURL,
+			imageURL: "static/images/cards/" + imageURL,
 			isFlipped: false,
 			canFlip: true
 		}))
