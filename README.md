@@ -1,3 +1,3 @@
 # Memorai - React browser memory game
 
-![screenshot](images/screenshot.png)
+![screenshot](images/screenshot1.png)
